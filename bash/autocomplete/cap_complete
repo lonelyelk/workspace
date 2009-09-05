@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-class RakeComplete
-  CACHE_NAME = ".rake_complete~"
+class CapComplete
+  CACHE_NAME = ".cap_complete~"
 
   def initialize(cmd)
     @command = cmd[ /\s(\S*)$/, 1 ] || ""
@@ -21,7 +21,7 @@ private
   end
 
   def rake_file
-    ["Rakefile", "Rakefile.rb", "rakefile", "rakefile.rb"].detect do |name|
+    ["Capfile", "Capfile.rb", "capfile", "capfile.rb"].detect do |name|
       File.file?(File.join(Dir.pwd, name))
     end
   end
@@ -31,7 +31,7 @@ private
   end
   
   def generate_tasks
-    tasks = `rake -T`.split("\n")[1..-1].map{ |l| l.split(/\s+/)[1] }
+    tasks = `cap -T`.split("\n").select{ |l| l.include? "#" }.map{ |l| l.split(/\s+/)[1] }
     File.open(cache_file, "w") do |f|
       tasks.each do |task|
         f.puts task
@@ -59,5 +59,5 @@ private
   end
 end
 
-puts RakeComplete.new(ENV["COMP_LINE"]).search
+puts CapComplete.new(ENV["COMP_LINE"]).search
 exit 0
