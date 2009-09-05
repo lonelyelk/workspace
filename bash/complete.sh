@@ -1,1 +1,1 @@
-complete -C ~/.bash/autocomplete/rake_complete -o default rake
+complete -C ~/.bash/autocomplete/rake_complete -o default -o nospace rake
