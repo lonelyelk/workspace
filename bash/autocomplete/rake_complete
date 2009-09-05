@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+
+class RakeComplete
+  CACHE_NAME = ".rake_complete~"
+
+  def initialize(cmd)
+    @command = cmd[ /\s(.+)$/, 1 ] || ""
+  end
+
+  def search
+    exit 0 if rake_file.nil?
+    selected_tasks.map do |cmd|
+      cmd.gsub(cmd_before_column, "")
+    end
+  end
+
+private
+
+  def cmd_before_column
+    @command[ /.+\:/ ] || ""
+  end
+
+  def rake_file
+    ["Rakefile", "Rakefile.rb", "rakefile", "rakefile.rb"].detect do |name|
+      File.file?(File.join(Dir.pwd, name))
+    end
+  end
+
+  def cache_file
+    File.join(Dir.pwd, CACHE_NAME)
+  end
+  
+  def generate_tasks
+    tasks = `rake -T`.split("\n")[1..-1].map{ |l| l.split(/\s+/)[1] }
+    File.open(cache_file, "w") do |f|
+      tasks.each do |task|
+        f.puts task
+      end
+    end
+    tasks
+  end
+
+  def cached_tasks
+    File.read(cache_file).split("\n")
+  end
+
+  def cache_valid?
+    File.exist?(cache_file) && (File.mtime(cache_file) >= File.mtime(rake_file))
+  end
+  
+  def tasks
+    cache_valid? ? cached_tasks : generate_tasks
+  end
+
+  def selected_tasks
+    tasks.select do |cmd|
+      cmd[0, @command.length] == @command
+    end
+  end
+end
+
+puts RakeComplete.new(ENV["COMP_LINE"]).search
+exit 0

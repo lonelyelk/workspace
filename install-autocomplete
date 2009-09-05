@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+puts "copying completion rules"
+puts `mkdir -pv ~/.bash/autocomplete`
+puts `cp -vr bash/autocomplete/* ~/.bash/autocomplete`
+puts `cp bash/complete.sh ~/.bash/`
+puts "**************************************************************"
+puts "insert following line into your .bashrc of .bash_profile file"
+puts "     source ~/.bash/complete.sh"
+puts "**************************************************************"
