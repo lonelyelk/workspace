@@ -1,0 +1,10 @@
+#!/usr/bin/ruby
+
+puts "Copying mime types in ~/.local/share folder"
+
+puts `mkdir -p ~/.local/share/mime/packages`
+puts `cp -v mime/*.xml ~/.local/share/mime/packages`
+
+puts "Updating mime database"
+
+puts `update-mime-database ~/.local/share/mime/`
