@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+puts "Importing local snippets"
+puts `cp -v ~/.gnome2/gedit/snippets/*.xml snippets`

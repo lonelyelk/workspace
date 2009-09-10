@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="erb">
+  <snippet>
+    <text><![CDATA[<%- $0 -%>]]></text>
+    <tag>r</tag>
+    <description>ruby</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= $0 -%>]]></text>
+    <tag>re</tag>
+    <description>ruby expression</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%- if ${1:condition} -%>
+	$0
+<%- end -%>]]></text>
+    <tag>if</tag>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%- if ${1:condition} -%>
+	$2
+<%- else -%>
+	$0
+<%- end -%>]]></text>
+    <tag>ife</tag>
+    <description>ifelse</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<${1:div} $2>$0</${1:div}>]]></text>
+    <tag>t</tag>
+    <description>tag</description>
+  </snippet>
+</snippets>

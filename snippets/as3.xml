@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="as3">
+  <snippet>
+    <text><![CDATA[for ($1; $2; $3) {
+	$4
+}]]></text>
+    <tag>for</tag>
+    <description>for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	$0
+}]]></text>
+    <tag>if</tag>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if (${1:condition}) {
+	$2
+} else {
+	$3
+}]]></text>
+    <tag>ife</tag>
+    <description>if else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[private function ${1:name}($2):${3:type} {
+	$0
+}]]></text>
+    <tag>pvf</tag>
+    <description>private function</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[public function ${1:name}($2):${3:type} {
+	$0
+}]]></text>
+    <tag>pbf</tag>
+    <description>public function</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[private var ${1:name}:${3:type};]]></text>
+    <tag>pvv</tag>
+    <description>private var</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[public var ${1:name}:${3:type};]]></text>
+    <tag>pbv</tag>
+    <description>public var</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[addEventListener(${1:eventType}, ${2:handler});]]></text>
+    <tag>ae</tag>
+    <description>add Event Listener</description>
+  </snippet>
+</snippets>
