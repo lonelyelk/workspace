@@ -31,4 +31,22 @@
     <tag>t</tag>
     <description>tag</description>
   </snippet>
+  <snippet>
+    <text><![CDATA[<$1>
+	${0:$GEDIT_SELECTED_TEXT}
+</$1>
+]]></text>
+    <accelerator><![CDATA[<Control>t]]></accelerator>
+    <description>tag surround</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA["${0:$GEDIT_SELECTED_TEXT}"]]></text>
+    <accelerator><![CDATA[<Control>apostrophe]]></accelerator>
+    <description>""</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA['${0:$GEDIT_SELECTED_TEXT}']]></text>
+    <accelerator><![CDATA[<Control><Alt>apostrophe]]></accelerator>
+    <description>''</description>
+  </snippet>
 </snippets>

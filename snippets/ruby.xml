@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="ruby">
+  <snippet>
+    <text><![CDATA["${0:$GEDIT_SELECTED_TEXT}"]]></text>
+    <accelerator><![CDATA[<Control>apostrophe]]></accelerator>
+    <description>""</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA['${0:$GEDIT_SELECTED_TEXT}']]></text>
+    <accelerator><![CDATA[<Control><Alt>apostrophe]]></accelerator>
+    <description>''</description>
+  </snippet>
+</snippets>
