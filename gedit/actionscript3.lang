@@ -92,7 +92,7 @@
 	        <keyword>return</keyword>
 	        <keyword>void</keyword>
         </context>
-	
+
         <context id="error-catching" style-ref="keyword">
 	        <keyword>try</keyword>
 	        <keyword>catch</keyword>
@@ -140,7 +140,7 @@
 	        <keyword>override</keyword>
 	        <keyword>static</keyword>
         </context>
-	
+
         <context id="special" style-ref="special">
 	        <keyword>abstract</keyword>
 	        <keyword>boolean</keyword>
@@ -168,7 +168,7 @@
         <context id="numeric" style-ref="decimal">
 	        <match>(\b([0-9]+|0[xX][0-9a-fA-F]+)[Ll]?\b|\b(([0-9]+[Ee][-]?[0-9]+|([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-]?[0-9]+)?)[fFdD]?|[0-9]+[FfDd]))</match>
 	    </context>
-	    
+
 	    <context id="builtins" style-ref="builtin">
             <keyword>AbstractConsumer</keyword>
             <keyword>AbstractEvent</keyword>
@@ -1187,7 +1187,7 @@
             <keyword>Zoom</keyword>
             <keyword>ZoomInstance</keyword>
 	    </context>
-	    
+
 	    <context id="interfaces" style-ref="interface">
             <keyword>IAbstractEffect</keyword>
             <keyword>IAdvancedDataGridRendererProvider</keyword>
@@ -1257,7 +1257,7 @@
             <keyword>ILogger</keyword>
             <keyword>ILoggingTarget</keyword>
         </context>
-	    
+
 	    <context id="air-classes" style-ref="air">
             <keyword>AIREvent</keyword>
             <keyword>ApplicationTitleBarBackgroundSkin</keyword>

@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+`git grep -I --name-only -e ""`.split("\n").each do |p|
+  lines = File.readlines(p)
+  if lines.inject(false) { |memo, l| l.gsub!(/\s+$/, "") || memo }
+    File.open(p, "w") do |f|
+      f.puts lines.join("\n")
+    end
+    puts "Removed trailing spaced from '#{p}'"
+    system "git add #{p}"
+  end
+end

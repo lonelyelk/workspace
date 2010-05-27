@@ -47,7 +47,7 @@
   <color name="carbon" value="#232323"/>
 
 <!--
-        GUI styles 
+        GUI styles
 -->
   <style name="text" foreground="white" background="carbon"/>
   <style name="selection" background="asfalto"/>
@@ -61,14 +61,14 @@
   <style name="search-match" foreground="carbon" background="yellow"/>
 
 <!--
-        Default styles 
+        Default styles
 -->
   <style name="def:keyword" foreground="ambra" bold="true"/>
   <style name="def:statement" foreground="alga"/>
   <style name="def:function" foreground="violet"/>
   <style name="def:preprocessor" foreground="white" bold="true"/>
   <style name="def:type" foreground="cyan"/>
-  
+
   <style name="def:character" foreground="ambra"/>
 
   <style name="def:comment" foreground="purple"/>
@@ -83,15 +83,15 @@
   <style name="def:identifier" foreground="green" bold="true"/>
 
   <style name="def:specials" foreground="white" background="magenta"/>
-  
+
   <style name="def:variable" foreground="cyan"/>
   <style name="def:boolean" foreground="fuchsia" bold="true"/>
   <style name="def:constant" foreground="yellow"/>
   <style name="def:special-constant" foreground="fuchsia" bold="true"/>
 
-   
+
 <!--
-        Language specific styles 
+        Language specific styles
 -->
 <!--  <style name="ruby:keyword"                foreground="ambra" bold="true"/> -->
   <style name="ruby:comment" foreground="magenta"/>
@@ -114,7 +114,7 @@
   <style name="diff:location" use-style="def:keyword"/>
 
   <style name="ruby:interpolation"         foreground="white" background="#233423"/>
-  
+
   <!-- ERB highlight -->
   <style name="erb:erbbackground"          foreground="white" background="#343434"/>
 

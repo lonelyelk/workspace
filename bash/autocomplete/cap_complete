@@ -29,7 +29,7 @@ private
   def cache_file
     File.join(Dir.pwd, CACHE_NAME)
   end
-  
+
   def generate_tasks
     tasks = `cap -T`.split("\n").select{ |l| l.include? "#" }.map{ |l| l.split(/\s+/)[1] }
     File.open(cache_file, "w") do |f|
@@ -47,7 +47,7 @@ private
   def cache_valid?
     File.exist?(cache_file) && (File.mtime(cache_file) >= File.mtime(rake_file))
   end
-  
+
   def tasks
     cache_valid? ? cached_tasks : generate_tasks
   end
