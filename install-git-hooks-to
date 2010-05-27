@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+if ARGV[0] && File.exist?(ARGV[0])
+  dir = File.join(ARGV[0], (ENV["GIT_DIR"] || ".git"), "hooks")
+
+  if File.exist? dir
+    puts "copying git hooks"
+    puts `cp -v git-hooks/* #{dir}`
+  else
+    puts "can't find git repository in specified dir"
+    puts "try setting $GIT_DIR environment variable"
+  end
+else
+  puts "directory doesnot exist"
+end
