@@ -52,4 +52,16 @@
     <tag>ae</tag>
     <description>add Event Listener</description>
   </snippet>
+  <snippet>
+    <text><![CDATA[${1:method}(function(${2:element}:*, index:int, arr:Array):${3:type} { return ${2:element}.$4; })$5]]></text>
+    <tag>acb</tag>
+    <description>array with callback</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[for each (var ${1:element}:${2:type} in ${3:array}) {
+	${1:element}$4
+}]]></text>
+    <tag>fe</tag>
+    <description>for each</description>
+  </snippet>
 </snippets>
