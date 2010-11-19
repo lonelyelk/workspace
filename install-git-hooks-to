@@ -5,7 +5,7 @@ if ARGV[0] && File.exist?(ARGV[0])
 
   if File.exist? dir
     puts "copying git hooks"
-    puts `cp -v git-hooks/* #{dir}`
+    puts `cp -pv git-hooks/* #{dir}`
   else
     puts "can't find git repository in specified dir"
     puts "try setting $GIT_DIR environment variable"
