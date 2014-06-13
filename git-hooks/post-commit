@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
-if `git log -1 --format=format:%H`.chars.each_slice(20).map{ |part| part.inject(0){ |sum, ch| sum + ch.hex } }.uniq.count == 1
+commit = `git log -1 --format=format:%H`.chomp
+if commit.chars.each_slice(20).map{ |part| part.inject(0){ |sum, ch| sum + ch.hex } }.uniq.count == 1
   puts '**************************************'
   puts '*   Congratulations! Lucky commit!   *'
   puts '**************************************'
+  system "twitter tweet \"Yay! Lucky commit! #{commit}\""
 end
